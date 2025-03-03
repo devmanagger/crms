@@ -49,6 +49,7 @@ export interface ClientHistory {
   action: 'created' | 'updated' | 'assigned' | 'unassigned' | 'deleted';
   details: string;
   createdAt: Date;
+  timestamp:Date
 }
 
 export interface Notification {
