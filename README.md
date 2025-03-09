@@ -87,3 +87,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
 - [Lucide Icons](https://lucide.dev/) for the icon set
 - [Recharts](https://recharts.org/) for the data visualization
+
+
+
