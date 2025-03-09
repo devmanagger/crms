@@ -1,14 +1,16 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/toaster';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
+import { AuthProvider } from "@/context/AuthContext";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'NexusCRM - Call Center Management System',
-  description: 'Modern CRM system for call centers with advanced management features',
+  title: "NexusCRM - Call Center Management System",
+  description:
+    "Modern CRM system for call centers with advanced management features",
 };
 
 export default function RootLayout({
@@ -25,7 +27,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <AuthProvider>
+            {" "}
+            {/* Envuelve el children con el AuthProvider */}
+            {children}
+          </AuthProvider>
           <Toaster />
         </ThemeProvider>
       </body>
